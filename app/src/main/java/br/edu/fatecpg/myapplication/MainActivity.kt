@@ -1,5 +1,6 @@
 package br.edu.fatecpg.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -20,6 +21,22 @@ class MainActivity : AppCompatActivity() {
         val edtI = findViewById<EditText>(R.id.edtCorrente)
         val btnCalcular = findViewById<Button>(R.id.btnCalcular)
         val txtResultado = findViewById<TextView>(R.id.txtResultado)
+
+        val btnAvancar = findViewById<Button>(R.id.btn_segundaTela)
+
+        fun irParaSegundaTela(){
+            val segundaTela = Intent(this, SegundaTela::class.java)
+            startActivity(segundaTela)
+        }
+
+        btnAvancar.setOnClickListener {
+
+            irParaSegundaTela()
+        }
+
+
+
+
 
         btnCalcular.setOnClickListener {
 
